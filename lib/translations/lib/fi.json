@@ -117,8 +117,9 @@
   "forgot.question": "Unohditko salasanasi?",
   "DemocracyOS markdown": "DemocracyOS markdown",
   "Don't have an account?": "Sinulla ei ole tiliä?",
-  "forgot.explanation": "Lähetämme sähköpostin, mistä löydät linkin salasanasi uusimista varten.",
-  "forgot.mail.sent": "Lähetimme sinulle viestin, mistä löydät ohjeet uuden salasanan luomista varten.",
+  "forgot.explanation": "Lähetämme sähköpostin, mistä löydät linkin salasanasi uusimista varten",
+  "forgot.mail.sent": "Lähetimme sinulle viestin, mistä löydät ohjeet uuden salasanan luomista varten",
+  "forgot.error.email-not-valid": "Sinun täytyy vahvistaa sähköpostiosoitteesi ennen kuin voit nollata tilin salasanan",
 
   "Signup complete" : "Rekisteröinti valmis",
   "Signup with email": "Kirjaudu sähköpostilla",
@@ -148,6 +149,8 @@
   "signin.error.email-not-valid" : "Tämän kansalaisen sähköpostiosoite ei ole vahvistettu. Rekisteröintiprosessin yhteydessä lähetämme kaikille tervetuloviestin. Tarkista sähköpostisi (muista tarkistaa myös roskapostikansio) ja klikkaa viestistä löytyvästä linkistä. Paina <a href='/signup/resend-validation-email'>here</a> jos haluat lähettää tervetuloviestin itsellesi uudestaan",
   "resend-validation-email-form.error.email-not-valid.no-link" : "Sähköpostiosoitteella kansalainen ei ole validoitu. Lähetämme kansalaisten tervetullut sähköpostitse, kun he kirjautuvat. Tarkista sähköpostisi (muista tarkistaa roskapostikansio liian) ja klikkaa linkkiä toimitetaan sähköpostitse.",
   "This account has been disabled" : "Tämä tili on poistettu käytöstä",
+
+  "signup.user-already-validated" : "Tämä kansalainen jo validoitu sähköpostiosoite",
 
   "Account data": "Tilitiedot",
   "Account updated": "Tili päivitetty",

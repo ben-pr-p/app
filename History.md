@@ -1,4 +1,70 @@
 
+0.10.9 / 2015-02-11
+==================
+
+ * Fix jump when scrolling headroom. Closes #637
+ * Fix saving a `law` with no `tag` on it. Closes #624
+
+0.10.8 / 2015-02-10
+===================
+
+  * Fix `timeago` interval to be 1s #631
+
+0.10.7 / 2015-02-10
+===================
+
+  * Remove bus emitting events to call timeago.update(). Update timeago update interval #631
+  * Bump DemocracyOS/side-comments version to 0.0.13 #631
+  * Fix hour formatting in law admin. Closes #625
+  * Fix duplicate entry in changelog
+
+0.10.6 / 2015-02-07
+==================
+
+ * Fix error when clicking on show replies when not logged in. Fixes #632
+ * Fix usage of COMMENTS_PER_PAGE in env.js so 0 is always default
+ * Fixed paging limit in side-comments. Closes #623
+ * Don't allow validated users to request resend validation email. Closes #604
+ * Fixed separation between commenter and timestamp. Closes #620
+ * When posting a new comment, timestamp shows immediately Closes #619
+ * Remove setting timeago.interval since default is good enough (30 secs)
+ * Add wrapper for multiple local-storage options. Closes #582
+ * Make multiple CPU core usage optional via config. Closes #611
+
+0.10.5 / 2015-02-05
+==================
+
+ * Update contributor acknowledgements
+ * Bump version of DemocracyOS/side-comments. Fixes #615
+ * Set timeago update interval to 30 secs (default) #615
+ * Changed express.get by config to get token secret. Closes #613
+
+0.10.4 / 2015-02-01
+==================
+
+ * Fix handling of errors on formview. Fixes #610
+ * Make 'new-topic' notifications true by default
+
+0.10.3 / 2015-01-31
+==================
+
+ * Fix Display side-comments button only on paragraph mouse-over for paragraphs with no comments. Closes #606
+ * Fix tag icons go glitchy when tag names are shorter than 3 characters. Closes #607
+
+0.10.2 / 2015-01-30
+==================
+
+ * Add swedish translation and credits
+ * Changed 'forgot password' error description #602
+ * Redirect to Resend validation token page if nonvalidated email is submitted. Closes #602.
+ * Forgot password form xplanation now hides when form is submitted. Closes #594.
+ * 'You must login' message placed over voting buttons. Closes #592.
+ * Fixed signin after signup token validation. Closes #595.
+ * Put 'signin required' message over argument on up/downvoting. Closes #593.
+ * Fixed settings responsive styles. Closes #591
+ * Move demo link above the image in README.md
+ * Add Russian translation credits
+
 0.10.1 / 2015-01-25
 ==================
 
@@ -368,12 +434,12 @@
  * Fix facebook and twitter cards, escaping HTML characters
  * Fix open and closed count as they were counting drafts if you were signed in as admin. Closes #342
 
-0.7.1 / 2014-05-30 
+0.7.1 / 2014-05-30
 ==================
 
  * Remove 404 not found page
 
-0.7.0 / 2014-05-29 
+0.7.0 / 2014-05-29
 ==================
 
  * Add 404 not found page
@@ -391,7 +457,7 @@
  * Fix transportation tag image issue
  * See migrating to 0.7.x
 
-0.6.7 / 2014-05-16 
+0.6.7 / 2014-05-16
 ==================
 
  * Comments are marked as spam when they exceed a config parameter or, if not set, when they have more spam reports than score (upvotes minus downvotes)
@@ -411,12 +477,12 @@
 
  * Remove unneeded remotes from root `component.json`
 
-0.6.3 / 2014-05-12 
+0.6.3 / 2014-05-12
 ==================
 
  * Fix build failure based on remotes. Change remotes order.
 
-0.6.2 / 2014-05-09 
+0.6.2 / 2014-05-09
 ==================
 
  * Fix comments paging and sorting
@@ -449,7 +515,7 @@
 
  * Fix 'voted' check after sign-in. Fixes #326
 
-0.4.10 / 2014-04-03 
+0.4.10 / 2014-04-03
 ==================
 
  * Refresh sidebar after casting vote
@@ -487,17 +553,17 @@
  * Fix law min-height for voted badge. Closes #294
  * Update `sample.json`
 
-0.4.8 / 2014-03-31 
+0.4.8 / 2014-03-31
 ==================
 
  * Add published laws RSS feed
 
-0.4.7 / 2014-03-20 
+0.4.7 / 2014-03-20
 ==================
 
  * Add `closingAt` law attribute on admin
 
-0.4.6 / 2014-03-18 
+0.4.6 / 2014-03-18
 ==================
 
  * Fix comments at law view rendering bumping slifszyc/paragraphs to 0.2.0 version

@@ -123,6 +123,7 @@
   "Don't have an account?": "Non tes unha conta?",
   "forgot.explanation": "Enviarémosche un correo electrónico cunha ligazón para reestablecer o teu contrasinal",
   "forgot.mail.sent": "Enviamos unha mensaxe ao teu correo electrónico con instrucións para crear un novo contrasinal",
+  "forgot.error.email-not-valid": "Vostede debe validar o enderezo de correo electrónico antes de pode axustar o contrasinal da conta",
 
   "Signup complete" : "Rexistro completo",
   "Signup with email": "Rexistro con correo electrónico",
@@ -152,6 +153,8 @@
   "signin.error.email-not-valid" : "A dirección de correo electrónico non foi validada. A cada cidadán envíaselle un correo electrónico de benvida ao momento de rexistrarse. O seguinte paso é abrir o correo electrónico que che enviamos (non te esquezas do cartafol 'Correo non desexado') e facer clic na ligazón provisto. Cliquea <a href='/signup/resend-validation-email'>aquí</a> se necesitás que che reenviemos o correo electrónico de benvida",
   "resend-validation-email-form.error.email-not-valid.no-link" : "A dirección de correo electrónico non foi validada. A cada cidadán envíaselle un correo electrónico de benvida ao momento de rexistrarse. O seguinte paso é abrir o correo electrónico que che enviamos (non te esquezas do cartafol 'Correo non desexado') e facer clic na ligazón provisto.",
   "This account has been disabled" : "Esta conta foi deshabilitada",
+
+  "signup.user-already-validated" : "Ese cidadán xa validado o enderezo de correo electrónico",
 
   "Account data": "Datos da conta",
   "Account updated": "Conta actualizada",

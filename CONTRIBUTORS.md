@@ -7,6 +7,7 @@
 * [Guido Vilariño](http://twitter.com/gvilarino)
 * [Sacha Lifszyc](https://twitter.com/slifszyc)
 * [José María Fresco](https://github.com/jfresco)
+* [Matías Lescano](https://github.com/mjlescano)
 
 ### Past contributors
 
@@ -38,4 +39,6 @@ Apart from English and Spanish, maintained by the DemocracyOS team, these brave 
 * German: [Charlotte Breuer](http://breuer-moellemann.de/)
 * Italian: [Felipe Muñoz](https://twitter.com/felipemuni)
 * Portuguese: [Open Knowledge Brasil](https://github.com/okfn-brasil)
-* Ukrainian and Russian: [@tarasdudar](https://github.com/tarasdudar)
+* Russian: [@tarasdudar](https://github.com/tarasdudar)
+* Swedish: [@Feilin-Ruidian](https://github.com/Feilin-Ruidian)
+* Ukrainian: [@tarasdudar](https://github.com/tarasdudar)

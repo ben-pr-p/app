@@ -123,6 +123,7 @@
   "Don't have an account?": "Don't have an account?",
   "forgot.explanation": "We will send an email with a link to reset your password",
   "forgot.mail.sent": "We just sent a message to your email with instructions to create a new password",
+  "forgot.error.email-not-valid": "You must validate your email address before you can reset your account password",
 
   "Signup complete" : "Signup complete",
   "Signup with email": "Signup with email",
@@ -136,7 +137,7 @@
   "Welcome, {name}!": "Welcome, {name}!",
   "Your sign up data was received. We sent you an email so you can validate your email address.": "Your sign up data was received. We sent you an email so you can validate your email address.",
   "Please check your email (remember to check your spam folder too) and click on the link supplied on the email.": "Please check your email (remember to check your spam folder too) and click on the link supplied on the email.",
-  "Your email has been validated and now you are logged in" : "Your email has been validated and now you are logged in", 
+  "Your email has been validated and now you are logged in" : "Your email has been validated and now you are logged in",
   "You're being redirected in 5 seconds": "You're being redirected in 5 seconds",
   "You can now argue and vote on bills!": "You can now argue and vote on bills!",
   "Go to": "Go to",
@@ -152,6 +153,8 @@
   "signin.error.email-not-valid" : "The email address for this citizen is not validated. We send citizens a welcome email when they sign up. Please check your email (remember to check your spam folder too) and click on the link supplied on the email. Click <a href='/signup/resend-validation-email'>here</a> if you need the welcome email to be resent",
   "resend-validation-email-form.error.email-not-valid.no-link" : "The email address for this citizen is not validated. We send citizens a welcome email when they sign up. Please check your email (remember to check your spam folder too) and click on the link supplied on the email.",
   "This account has been disabled" : "This account has been disabled",
+
+  "signup.user-already-validated" : "This citizen already validated the email address",
 
   "Account data": "Account data",
   "Account updated": "Account updated",

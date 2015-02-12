@@ -97,6 +97,7 @@
   "Don't have an account?": "Ben je al aangemeld?",
   "forgot.explanation": "We sturen je een link om je wachtwoord opnieuw in te stellen",
   "forgot.mail.sent": "We hebben je net een e-mail gestuurd om je wachtwoord opnieuw in te stellen",
+  "forgot.error.email-not-valid": "Vous devez valider votre adresse de courriel avant vous pouvez réinitialiser votre mot de passe",
 
   "Signup complete" : "Aanmelden voltooid",
   "Signup with email": "Meld je aan met je e-mail adres",
@@ -126,6 +127,8 @@
   "signin.error.email-not-valid" : "Het mailadres van deze gebruiker is nog niet bevestigd. Als een gebruiker zich aanmeld, versturen we altijd een welkomstmail. Controlleer je mail (vergeet niet je ongewenste berichten te bekijken) en klik op de bevestigingskoppeling. Klik <a href='/signup/resend-validation-email'>hier</a> als je de bevestigingsmail nog een keer wilt ontvangen",
   "resend-validation-email-form.error.email-not-valid.no-link" : "Het e-mailadres voor deze burger is niet gevalideerd. We sturen burgers een welkome e-mail wanneer ze zich aanmelden. Controleer uw e-mail (vergeet niet om uw spam map te controleren) en klik op de op de e-mail geleverd link.",
   "This account has been disabled" : "Dit account is uitgeschakeld",
+
+  "signup.user-already-validated" : "Deze burger al het e-mailadres gevalideerd",
 
   "Account data": "Gebruikersgegevens",
   "Account updated": "Gebruikersgegevens bijgewerkt",

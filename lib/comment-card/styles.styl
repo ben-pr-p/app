@@ -27,10 +27,12 @@
       height 46px
       border-radius 100px
 
-  .media-heading .comment-action
-    margin-top 3px
-    display none
-    float right
+  .media-heading
+    .comment-action
+      margin-top 3px
+      display none
+    small.ago
+      margin-left: 10px
 
   .media-body
     position relative
@@ -116,7 +118,7 @@
 
   .oncomment,
   .onreply
-    background-color rgba(249, 249, 249, 0.5)
+    background-color rgba(249, 249, 249, 0.9)
     display none
     font-weight bold
     height 100%
@@ -151,6 +153,11 @@
     &.btn-edit, &.btn-reply-edit
       &:hover
         color #f39c12
+
+    &.error, &.loginrequired
+      a
+        margin-right 0
+
   &.spam
     .comment-text, .comment-actions, .link-report.flag
       display:none
