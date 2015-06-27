@@ -38,7 +38,6 @@ html(lang='en')
         try{Typekit.load();}catch(e){}
       script.
         var csrfToken = '#{csrfToken}';
-        var access_token = '#{access_token}'
 
       include includes/remove-hash
 
@@ -47,7 +46,8 @@ html(lang='en')
       #snap-content.snap-content
         //- Start of `Page Content`
         - var color = config.headerBackgroundColor;
-        header.app-header(style=color ? 'background-color: #{color};' : '')
+        - var headerClassName = config.headerContrast ? 'with-contrast' : '';
+        header.app-header(style=color ? 'background-color: #{color};' : '', class=headerClassName)
         section#content.site-content
           block content
         section#browser.site-content
@@ -67,9 +67,11 @@ html(lang='en')
       //- General Site javascript
       script.
         window.config=!{JSON.stringify(client)}
+        window.config.locale='#{locale}'
+        window.translations=!{JSON.stringify(translations)}
       script(src='/app.js')
 
       //- Boot application
-      script.
-        require('./lib/boot');
+      script require('./lib/boot');
+
       //- End of `Javascripts`

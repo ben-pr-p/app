@@ -23,16 +23,16 @@ Please refer to the [Installation](https://github.com/DemocracyOS/app/wiki/Insta
 
 ## Contributing
 
-Please see [CONTRIBUTING.md](https://github.com/DemocracyOS/app/blob/development/CONTRIBUTING.md) for further details.
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for further details.
 
 ## Contributors
 
-See [CONTRIBUTORS.md](https://github.com/DemocracyOS/app/blob/development/CONTRIBUTORS.md) to get to know the DemocracyOS team and contributors.
+See [CONTRIBUTORS.md](CONTRIBUTORS.md) to get to know the DemocracyOS team and contributors.
 
 ## Links
 
 * [DemocracyOS official site](http://www.democracyos.org). The project's official site.
-* [DemocracyOS maling list](http://groups.google.com/group/democracyos-app): questions about DemocracyOS exclusively. For bug reports or feature requests please use the project's [Issues](https://github.com/DemocracyOS/app/issues).
+* [DemocracyOS mailing list](https://groups.google.com/forum/#!forum/democracyos-app): questions about DemocracyOS exclusively. For bug reports or feature requests please use the project's [Issues](https://github.com/DemocracyOS/app/issues).
 * [Democracia en Red](http://www.democraciaenred.org): The `Net Democracy Foundation` official site.
 
 ## Browser support
@@ -45,4 +45,4 @@ Tag icons made by Yannick from [flaticon.com](http://www.flaticon.com) licensed 
 
 ## License
 
-DemocracyOS is open source software under the MIT license. Please see full terms in the [LICENSE.txt](https://github.com/DemocracyOS/app/blob/development/LICENSE.txt) file.
+DemocracyOS is open source software under the MIT license. Please see full terms in the [LICENSE.txt](LICENSE.txt) file.
