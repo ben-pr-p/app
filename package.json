@@ -1,6 +1,6 @@
 {
   "name": "DemocracyOS",
-  "version": "0.17.6",
+  "version": "0.18.0",
   "description": "An online space for deliberation and voting on political proposals. The software aims to stimulate better arguments and come to better rulings.",
   "homepage": "http://www.democracyos.org/",
   "keywords": [
@@ -104,7 +104,7 @@
     "xss": "0.x"
   },
   "devDependencies": {
-    "google-translate": "^0.1.8"
+    "google-translate": "^1.0.0"
   },
   "main": "pdr",
   "engines": {
