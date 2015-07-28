@@ -13,7 +13,7 @@
   "settingsUrl": "",
   "staff": [],
   "allowEmailAliases": true,
-  "facebookSignin": false,
+  "facebookSignin": true,
   "auth": {
     "basic": {
       "username": "",
@@ -73,9 +73,9 @@
       "username": "@democracyos"
     }
   },
-  "logo": "/lib/boot/images/logo.png",
-  "logoMobile": "/lib/boot/images/logo.png",
-  "favicon": " /lib/boot/images/favicon.ico",
+  "logo": "/lib/boot/images/RestoreDemocracy.png",
+  "logoMobile": "/lib/boot/images/RestoreDemocracy.png",
+  "favicon": " /lib/boot/images/RestoreDemocracyfavicon.ico",
   "organizationName": "DemocracyOS on GitHub",
   "organizationUrl": "https://github.com/DemocracyOS/app",
   "learnMoreUrl": "",
