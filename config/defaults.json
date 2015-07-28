@@ -13,7 +13,7 @@
   "settingsUrl": "",
   "staff": [],
   "allowEmailAliases": true,
-  "facebookSignin": true,
+  "facebookSignin": false,
   "auth": {
     "basic": {
       "username": "",
