@@ -160,7 +160,8 @@
     "verigy": "2.0.1",
     "jsdom": "6.3.0",
     "democracyos-wrap": "~0.0.2",
-    "xss": "0.2.2"
+    "xss": "0.2.2",
+    "d3": "3.5.6"
   },
   "devDependencies": {
     "nomnom": "^1.8.1",
