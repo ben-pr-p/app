@@ -1,0 +1,19 @@
+.platform-filter
+  .platform-filter-status.btn-group.btn-group-justified
+    a.btn.btn-default
+      = "New Platform"
+    //- a.btn.btn-default(data-status='open', class=(filter.status === 'open' ? 'active' : ''))
+      = formatNumber(openCount) + t('platform.open')
+    //- a.btn.btn-default(data-status='closed', class=(filter.status === 'closed' ? 'active' : ''))
+      = formatNumber(closedCount) + t('platform.closed')
+
+  .platform-filter-sort.btn-group
+    //- button.btn.btn-default.current-department(type='button', data-sort-btn)
+      span.pull-left= t(currentSort.label)
+      span.caret
+    //- ul.dropdown-list
+      each sort, name in sorts
+        - var active = name == currentSort.name
+        li(data-sort=name, class= active ? 'active' : '')
+          a(href='#')= t(sort.label)
+
