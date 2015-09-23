@@ -1,0 +1,35 @@
+@import '../../boot/vars'
+
+.sidebar-list
+  overflow scroll
+
+  div
+    border-bottom 1px solid lighten(#BDC3C7, 40%)
+    draggable true
+    width 100%
+    padding-top 10px
+    
+    &:hover
+      background #eee
+
+    &.active
+      a
+        color black
+        background #fff
+        .item-tag
+          svg.hexagon
+            opacity 1
+
+    span
+      padding-left spacing
+      color black
+      position relative
+      color #666
+      font-size 15px
+      line-height 19px
+      font-weight bold
+      display block
+      margin-bottom 10px
+
+
+
