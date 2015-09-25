@@ -1,6 +1,7 @@
 - var formatNumber = function (v) { return (v < 100 ? v : '99+') + ' '; };
 
 .sidebar-filter
+  span.heading= 'Topics'
   .sidebar-filter-status.btn-group.btn-group-justified
     a.btn.btn-default(data-status='open', class=(filter.status === 'open' ? 'active' : ''))
       = formatNumber(openCount) + t('sidebar.open')
@@ -16,10 +17,3 @@
         - var active = name == currentSort.name
         li(data-sort=name, class= active ? 'active' : '')
           a(href='#')= t(sort.label)
-
-  .sidebar-filter-hide-voted(class=user.logged() ? '' : 'hide')
-    input#hide-voted(type='checkbox',
-      name='hide-voted',
-      checked= filter.hideVoted,
-      data-hide-voted)
-    label(for='hide-voted')= t('sidebar.hide-voted')

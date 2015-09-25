@@ -29,13 +29,13 @@
         h5= t('proposal-options.vote')
         .direct-vote
           a.vote-option.vote-yes(href="#", data-proposal=proposal.id)
-            i.flaticon.solid.thumbs-up-1
+            i.flaticon.solid.thumbs-up
             span= t('proposal-options.yea')
           a.vote-option.vote-abstain(href="#", data-proposal=proposal.id)
             i.flaticon.solid.pause
             span= t('proposal-options.abstain')
           a.vote-option.vote-no(href="#", data-proposal=proposal.id)
-            i.flaticon.solid.thumbs-up-1
+            i.flaticon.solid.thumbs-up
             span= t('proposal-options.nay')
 
         - if (!user.id)

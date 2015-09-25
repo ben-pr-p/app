@@ -163,7 +163,7 @@
     "xss": "0.2.2",
     "d3": "3.5.6",
     "dragula": "3.3.0",
-    "venn.js": "benfred/venn.js"
+    "venn.js": "0.2.0"
   },
   "devDependencies": {
     "nomnom": "^1.8.1",
