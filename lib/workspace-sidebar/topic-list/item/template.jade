@@ -1,0 +1,11 @@
+- var voted = user.logged() && !!item.voted
+
+li.topic(data-id=item.id, class=active ? 'active' : '')
+  div.topic-container
+    span.title= item.mediaTitle
+    a.opinion-option.yes(href='#')
+      i.flaticon.solid.thumbs-up
+    a.opinion-option.abstain(href='#')
+      i.flaticon.solid.pause
+    a.opinion-option.no(href='#')
+      i.flaticon.solid.thumbs-up
