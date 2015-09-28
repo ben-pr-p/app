@@ -1,14 +1,14 @@
 - var formatNumber = function (v) { return (v < 100 ? v : '99+') + ' '; };
 
-.sidebar-filter
+.sidebar-topic-filter
   span.heading= 'Topics'
-  .sidebar-filter-status.btn-group.btn-group-justified
+  .sidebar-topic-filter-status.btn-group.btn-group-justified
     a.btn.btn-default(data-status='open', class=(filter.status === 'open' ? 'active' : ''))
       = formatNumber(openCount) + t('sidebar.open')
     a.btn.btn-default(data-status='closed', class=(filter.status === 'closed' ? 'active' : ''))
       = formatNumber(closedCount) + t('sidebar.closed')
 
-  .sidebar-filter-sort.btn-group
+  .sidebar-topic-filter-sort.btn-group
     button.btn.btn-default.current-department(type='button', data-sort-btn)
       span.pull-left= t(currentSort.label)
       span.caret
@@ -17,3 +17,7 @@
         - var active = name == currentSort.name
         li(data-sort=name, class= active ? 'active' : '')
           a(href='#')= t(sort.label)
+
+  .sidebar-topic-filter-hide.btn-group
+    button.btn.btn-default(type='button')
+      span.caret

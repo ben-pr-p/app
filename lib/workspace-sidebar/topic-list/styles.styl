@@ -1,7 +1,7 @@
 @import '../../boot/vars'
 
 .sidebar-topic-list
-  li
+  div
     border-bottom 1px solid lighten(#BDC3C7, 40%)
     
     div.topic-container
@@ -43,13 +43,17 @@
 
         &.yes
           background-color #a4cb53
-          &:hover, selected
+          &:hover, &.selected              
             background-color darken(#a4cb53, 40%)
+          &.unselected
+            background-color lighten(#a4cb53, 40%)
 
         &.no
           background-color #d95e59
-          &:hover, selected
+          &:hover, &.selected
             background-color darken(#d95e59, 40%)
+          &.unselected
+            background-color lighten(#d95e59, 40%)
           i
             display block
             transform s("rotate(%s)", 180deg) 
@@ -58,7 +62,13 @@
 
         &.abstain
           background-color #666
-          &:hover, selected
+          &:hover, &.selected
             background-color darken(#666666, 40%)
+          &.unselected
+            background-color lighten(#666666, 40%)
+
+.dragging
+  .unselected
+    visibility hidden
     
         
