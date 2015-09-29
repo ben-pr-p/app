@@ -1,4 +1,5 @@
 
 div.platform(data-id=item.id, class=active ? 'active' : '')
-  div.platform-container
+  .platform-container
     span.title= item.mediaTitle
+    input.active(type='checkbox', name='active')

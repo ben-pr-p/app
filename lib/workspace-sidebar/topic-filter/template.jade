@@ -1,7 +1,6 @@
 - var formatNumber = function (v) { return (v < 100 ? v : '99+') + ' '; };
 
 .sidebar-topic-filter
-  span.heading= 'Topics'
   .sidebar-topic-filter-status.btn-group.btn-group-justified
     a.btn.btn-default(data-status='open', class=(filter.status === 'open' ? 'active' : ''))
       = formatNumber(openCount) + t('sidebar.open')
@@ -18,6 +17,8 @@
         li(data-sort=name, class= active ? 'active' : '')
           a(href='#')= t(sort.label)
 
-  .sidebar-topic-filter-hide.btn-group
-    button.btn.btn-default(type='button')
-      span.caret
+  .sidebar-topic-filter-collapse.btn-group
+    div.expand
+      span.heading= 'Topics'
+      a.expand-button(data-expand-button)
+        i.icon-angle-down

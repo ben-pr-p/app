@@ -2,6 +2,27 @@
   padding 5px 20px 5px
   border-bottom 1px solid #d7dbdd
   text-align center
+  background-color #d7dbdd
+  
+  .expand
+    text-align left
+  
+    a.expand-button
+      float right
+      text-decoration none
+      cursor pointer
+      color black
+      
+      i
+        display inline-block
+        font-size large
+        font-weight bold
+
+      &.collapsed
+        i
+          transform s("rotate(%s)", 270deg) 
+          -ms-transform s("rotate(%s)", 270deg) /* IE 9 */
+          -webkit-transform s("rotate(%s)", 270deg)
   
   span.heading
     font-weight bold

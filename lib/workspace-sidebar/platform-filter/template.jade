@@ -1,5 +1,4 @@
 .platform-filter
-  span.heading= 'Platforms'
   .platform-filter-status.btn-group.btn-group-justified
     a.btn.btn-default
       = "New Platform"
@@ -17,4 +16,10 @@
         - var active = name == currentSort.name
         li(data-sort=name, class= active ? 'active' : '')
           a(href='#')= t(sort.label)
+
+  .platform-topic-filter-collapse.btn-group
+    div.expand
+      span.heading= 'Platforms'
+      a.expand-button(data-expand-button)
+        i.icon-angle-down
 

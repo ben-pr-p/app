@@ -162,7 +162,7 @@
     "democracyos-wrap": "~0.0.2",
     "xss": "0.2.2",
     "d3": "3.5.6",
-    "venn.js": "0.2.0",
+    "venn": "benfred/venn.js",
     "drag-drop-dom": "1.0.2"
   },
   "devDependencies": {
