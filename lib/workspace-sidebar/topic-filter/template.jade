@@ -1,21 +1,19 @@
-- var formatNumber = function (v) { return (v < 100 ? v : '99+') + ' '; };
-
 .sidebar-topic-filter
-  .sidebar-topic-filter-status.btn-group.btn-group-justified
-    a.btn.btn-default(data-status='open', class=(filter.status === 'open' ? 'active' : ''))
-      = formatNumber(openCount) + t('sidebar.open')
-    a.btn.btn-default(data-status='closed', class=(filter.status === 'closed' ? 'active' : ''))
-      = formatNumber(closedCount) + t('sidebar.closed')
+  .sidebar-topic-filter-search.btn-group.btn-group-justified
+    .input-group.input-group-md
+      span.input-group-addon
+        i.glyphicon.glyphicon-search
+      input.form-control.search(type='text', placeholder='#{t("admin-topics.list.search.placeholder")}', value=filter.search, autofocus)
 
-  .sidebar-topic-filter-sort.btn-group
-    button.btn.btn-default.current-department(type='button', data-sort-btn)
-      span.pull-left= t(currentSort.label)
+  .sidebar-topic-tag-filter.btn-group
+    button.btn.btn-default.current-department(type='button', data-tag-filter-btn)
+      - if (filter.tag)
+        - if (filter.tag.name)
+          span.current-tag.pull-left= filter.tag.name
+      - else
+        span.current-tag.pull-left= 'Filter by tag'
       span.caret
-    ul.dropdown-list
-      each sort, name in sorts
-        - var active = name == currentSort.name
-        li(data-sort=name, class= active ? 'active' : '')
-          a(href='#')= t(sort.label)
+    ul.topic-tag-dropdown-list
 
   .sidebar-topic-filter-collapse.btn-group
     div.expand

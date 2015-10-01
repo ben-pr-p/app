@@ -1,23 +1,21 @@
 .platform-filter
-  .platform-filter-status.btn-group.btn-group-justified
-    a.btn.btn-default
-      = "New Platform"
-    //- a.btn.btn-default(data-status='open', class=(filter.status === 'open' ? 'active' : ''))
-      = formatNumber(openCount) + t('platform.open')
-    //- a.btn.btn-default(data-status='closed', class=(filter.status === 'closed' ? 'active' : ''))
-      = formatNumber(closedCount) + t('platform.closed')
+  .sidebar-platform-filter-search.btn-group.btn-group-justified
+    .input-group.input-group-md
+      span.input-group-addon
+        i.glyphicon.glyphicon-search
+      input.form-control.search(type='text', placeholder='#{t("admin-platforms.list.search.placeholder")}', autofocus)
 
-  .platform-filter-sort.btn-group
-    //- button.btn.btn-default.current-department(type='button', data-sort-btn)
-      span.pull-left= t(currentSort.label)
+  //- .platform-tag-filter.btn-group
+    //- button.btn.btn-default.current-department(type='button', data-tag-filter-btn)
+      span.pull-left= t(currentTag.label)
       span.caret
     //- ul.dropdown-list
-      each sort, name in sorts
-        - var active = name == currentSort.name
+      each tag, name in tags
+        - var active = name == currentTag.name
         li(data-sort=name, class= active ? 'active' : '')
-          a(href='#')= t(sort.label)
+          a(href='#')= t(tag.label)
 
-  .platform-topic-filter-collapse.btn-group
+  .sidebar-platform-filter-collapse.btn-group
     div.expand
       span.heading= 'Platforms'
       a.expand-button(data-expand-button)
