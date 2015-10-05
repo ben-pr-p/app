@@ -1,11 +1,12 @@
 - var voted = user.logged() && !!item.voted
 
-div.topic(data-id=item.id, class=active ? 'active' : '')
-  div.topic-container
-    span.title= item.mediaTitle
-    a.opinion-option.yes(href='#', data-opinion-yes)
-      i.flaticon.solid.thumbs-up
-    a.opinion-option.abstain(href='#', data-opinion-abstain)
-      i.flaticon.solid.pause
-    a.opinion-option.no(href='#', data-option-no)
-      i.flaticon.solid.thumbs-up
+div.topic(data-id=item.id)
+  a.topic-link(href=item.url)
+    div.topic-container
+      span.title= item.mediaTitle
+      a.opinion-option.yes(href='#', data-opinion-yes)
+        i.flaticon.solid.thumbs-up
+      a.opinion-option.abstain(href='#', data-opinion-abstain)
+        i.flaticon.solid.pause
+      a.opinion-option.no(href='#', data-option-no)
+        i.flaticon.solid.thumbs-up

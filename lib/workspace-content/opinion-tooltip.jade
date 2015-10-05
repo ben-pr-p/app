@@ -1,14 +1,15 @@
 div.tooltip-container
   each opinion in opinions
-    div.opinion(data-id=opinion.id)
-      div.opinion-container
-        span.title= opinion.label
-        - if (opinion.value == 'positive')
-          a.opinion-option.yes(href='#', data-opinion-yes)
-            i.flaticon.solid.thumbs-up
-        - if (opinion.value == 'neutral')
-          a.opinion-option.abstain(href='#', data-opinion-abstain)
-            i.flaticon.solid.pause
-        - if (opinion.value == 'negative')
-          a.opinion-option.no(href='#', data-option-no)
-            i.flaticon.solid.thumbs-up
+    a(href=opinion.url)
+      div.opinion(data-id=opinion.id)
+        div.opinion-container
+          span.title= opinion.label
+          - if (opinion.value == 'positive')
+            a.opinion-option.yes(href='#', data-opinion-yes)
+              i.flaticon.solid.thumbs-up
+          - if (opinion.value == 'neutral')
+            a.opinion-option.abstain(href='#', data-opinion-abstain)
+              i.flaticon.solid.pause
+          - if (opinion.value == 'negative')
+            a.opinion-option.no(href='#', data-option-no)
+              i.flaticon.solid.thumbs-up
