@@ -2,7 +2,7 @@ div.tooltip-container
   each opinion in opinions
     div.opinion(data-id=opinion.id)
       div.opinion-container
-        span.title= opinion.topicId
+        span.title= opinion.label
         - if (opinion.value == 'positive')
           a.opinion-option.yes(href='#', data-opinion-yes)
             i.flaticon.solid.thumbs-up
