@@ -87,8 +87,6 @@
   "admin-whitelists.list.add-whitelist": "Add",
   "admin-whitelists.list.search.placeholder": "Search a whitelist...",
   "admin-platforms-form.button.add-link": "Add link",
-  "admin-platforms-form.button.make-private": "Unpublish",
-  "admin-platforms-form.button.make-public": "Publish",
   "admin-platforms-form.button.submit": "Save",
   "admin-platforms-form.clause.button.delete": "Delete",
   "admin-platforms-form.clause.confirmation.body": "This action will erase data permanently. Would you like to proceed?",
