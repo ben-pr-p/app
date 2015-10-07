@@ -1,0 +1,15 @@
+.sidebar-main-filter
+  .sidebar-main-dropdown.btn-group
+    button.btn.btn-default.current-department(type='button', data-sidebar-main-btn)
+      - if (!current)
+        span.current-sidebar.pull-left= 'Choose a section'
+      - else
+        span.current-sidebar.pull-left= current
+      span.caret
+    ul.sidebar-dropdown-list(data-sarasa)
+      each sidebar in sidebars
+        li(data-sidebar-name=sidebar, class= active ? 'active' : '')
+          a= sidebar
+
+.sidebar-container
+ 
