@@ -5,16 +5,6 @@
         i.glyphicon.glyphicon-search
       input.form-control.platform-search(type='text', placeholder='#{t("admin-platforms.list.search.placeholder")}', autofocus)
 
-  //- .platform-tag-filter.btn-group
-    //- button.btn.btn-default.current-department(type='button', data-tag-filter-btn)
-      span.pull-left= t(currentTag.label)
-      span.caret
-    //- ul.dropdown-list
-      each tag, name in tags
-        - var active = name == currentTag.name
-        li(data-sort=name, class= active ? 'active' : '')
-          a(href='#')= t(tag.label)
-
   .sidebar-platform-filter-collapse.btn-group
     div.expand
       span.heading= 'Platforms'

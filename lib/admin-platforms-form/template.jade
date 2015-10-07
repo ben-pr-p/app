@@ -1,62 +1,49 @@
 - var prepend = forum ? ('/' + forum.name) : ''
 
 #platforms-wrapper
-  - if (tags.length == 0)
-    if (user.staff)
-      p.alert.alert-danger.text-center!=t('admin-platforms-form.alert.no-tags')
-      p.text-center
-        a.btn.btn-lg.btn-primary.create-tag(href='#{prepend}/admin/tags/create')=t('admin-tags-form.title.create')
-    else
-      p.alert.alert-danger.text-center=t('admin-platforms-form.alert.no-tags.no-staff')
-  - else
-    .platform-admin.col-md-9
-      .heading
-        .circle
-          i.icon-user
-        h1= t(form.title)
-      form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
-        input(type='hidden', name='_platform_id_', value=platform.id)
-        ul.form-messages
-        .form-group
-          label= t('admin-platforms-form.label.mediaTitle')
-          input.form-control(type='text', id="mediaTitle", name='mediaTitle', tabindex=1, placeholder=t('admin-platforms-form.label.mediaTitle'), value=platform.mediaTitle, validate='required')
-        .form-group
-          label= t('admin-platforms-form.label.tag')
-          select.form-control(name='tag', tabindex=2, validate='required')
-            - each tag in tags
-              option(selected= platform.tag ? tag.hash === platform.tag.hash : false, value=tag.hash)= tag.name
-        .form-group
-          label= t('admin-platforms-form.label.platformId')
-          input.form-control(type='text', id="platformId", name='officialTitle', tabindex=3, placeholder=t('admin-platforms-form.label.platformId'), value=platform.platformId)
-        .form-group
-          label= t('admin-platforms-form.label.author')
-          input.form-control(type='text', id="platformAuthor", name='platformAuthor', tabindex=4, placeholder='John Doe', value=platform.author, validate='author')
-        .form-group
-          label= t('admin-platforms-form.label.author') + ' URL'
-          input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=platform.authorUrl, validate='url')
-        .form-group
-          label= t('admin-platforms-form.label.global')
-          .global-toggle
-        .form-group
-          label= t('admin-platforms-form.label.summary')
-          textarea.form-control(name='body', tabindex=7)= platform.body
-        .form-group
-          label=t('admin-platforms-form.label.resources')
-          .platform-links
-            - if (platform.links && platform.links.length)
-              - each link, id in platform.links
-                include link
-          .pull-left
-            a.add-link.btn.btn-block.btn-info(href='#')= t('admin-platforms-form.button.add-link')
-            .form-group: input.btn.btn-success.btn-block.btn-lg.hide(type='submit', tabindex=12, value=t('admin-platforms-form.button.submit'))
-          span.add-link-forbidden.hide=t('admin-platforms-form.message.add-link-forbidden')
-    .col-md-3.commands
-      a.btn.btn-success.btn-block.save
-        span=t('admin-platforms-form.button.submit')
-      a.btn.btn-primary.btn-block.make-private(class=platform.public && platform.id ? '' : 'hide')
-        span=t('admin-platforms-form.button.make-private')
-      a.btn.btn-primary.btn-block.make-public(class=platform.draft && platform.id ? '' : 'hide')
-        span=t('admin-platforms-form.button.make-public')
-      - if (platform.id)
-        a.btn.btn-danger.btn-block.delete-platform
-          span=t('admin-platforms-form.delete-platform.button.delete')
+  .platform-admin.col-md-9
+    .heading
+      .circle
+        i.icon-user
+      h1= t(form.title)
+    form.form-horizontal(action=form.action, method="post", role="form", autocomplete="off", novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
+      input(type='hidden', name='_platform_id_', value=platform.id)
+      ul.form-messages
+      .form-group
+        label= t('admin-platforms-form.label.mediaTitle')
+        input.form-control(type='text', id="mediaTitle", name='mediaTitle', tabindex=1, placeholder=t('admin-platforms-form.label.mediaTitle'), value=platform.mediaTitle, validate='required')
+      .form-group
+        label= t('admin-platforms-form.label.platformId')
+        input.form-control(type='text', id="platformId", name='officialTitle', tabindex=3, placeholder=t('admin-platforms-form.label.platformId'), value=platform.platformId)
+      .form-group
+        label= t('admin-platforms-form.label.author')
+        input.form-control(type='text', id="platformAuthor", name='platformAuthor', tabindex=4, placeholder='John Doe', value=platform.author, validate='author')
+      .form-group
+        label= t('admin-platforms-form.label.author') + ' URL'
+        input.form-control(type='text', id="authorUrl", name='authorUrl', tabindex=5, placeholder='http://en.wikipedia.org/wiki/John_Doe', value=platform.authorUrl, validate='url')
+      .form-group
+        label= t('admin-platforms-form.label.global')
+        .global-toggle
+      .form-group
+        label= t('admin-platforms-form.label.summary')
+        textarea.form-control(name='body', tabindex=7)= platform.body
+      .form-group
+        label=t('admin-platforms-form.label.resources')
+        .platform-links
+          - if (platform.links && platform.links.length)
+            - each link, id in platform.links
+              include link
+        .pull-left
+          a.add-link.btn.btn-block.btn-info(href='#')= t('admin-platforms-form.button.add-link')
+          .form-group: input.btn.btn-success.btn-block.btn-lg.hide(type='submit', tabindex=12, value=t('admin-platforms-form.button.submit'))
+        span.add-link-forbidden.hide=t('admin-platforms-form.message.add-link-forbidden')
+  .col-md-3.commands
+    a.btn.btn-success.btn-block.save
+      span=t('admin-platforms-form.button.submit')
+    a.btn.btn-primary.btn-block.make-private(class=platform.public && platform.id ? '' : 'hide')
+      span=t('admin-platforms-form.button.make-private')
+    a.btn.btn-primary.btn-block.make-public(class=platform.draft && platform.id ? '' : 'hide')
+      span=t('admin-platforms-form.button.make-public')
+    - if (platform.id)
+      a.btn.btn-danger.btn-block.delete-platform
+        span=t('admin-platforms-form.delete-platform.button.delete')
