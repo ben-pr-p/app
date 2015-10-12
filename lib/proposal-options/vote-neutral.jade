@@ -1,1 +1,7 @@
-.alert.alert-info #{t('proposal-options.voted-abstained')}.
+.alert.alert-info
+  = t('proposal-options.voted-abstained') + ' '
+  - if (neutrals)
+    - var voteidx = neutrals.map(function (v) {return v.author}).indexOf(user.id)
+    - if (neutrals[voteidx].platform)
+      = t('proposal-options.voted-by-platform') + ' ' + neutrals[voteidx].platform
+    = '.'

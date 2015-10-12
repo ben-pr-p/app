@@ -1,1 +1,7 @@
-.alert.alert-success #{t('proposal-options.voted-yea')}.
+.alert.alert-success
+  = t('proposal-options.voted-yea') + ' '
+  - if (positives)
+    - var voteidx = positives.map(function (v) {return v.author}).indexOf(user.id)
+    - if (positives[voteidx].platform)
+      = t('proposal-options.voted-by-platform') + ' ' + positives[voteidx].platform
+    = '.'
