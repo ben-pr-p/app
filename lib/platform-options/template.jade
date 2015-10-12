@@ -1,0 +1,35 @@
+- var participants = platform.participants || []
+
+- var closed = platform.closingAt && +new Date(platform.closingAt) < Date.now()
+- var voted = user && ~participants.indexOf(user.id)
+
+.inner-container.commentable-container()
+
+  .platform-options
+    .vote-box
+      div#voting-error.alert.alert-warning.hide #{t('platform-options.error.voting')}.
+      .meta-data(class= !!user.id ? '' : 'hide')
+        - if(~participants.indexOf(user.id))
+          include vote-positive
+
+        a.meta-item.change-vote(href="#", class= voted && !closed ? '' : 'hide')
+          i.icon-refresh
+          small #{t('platform-options.change-vote')}.
+
+      .vote-options(class= voted || closed ? 'hide' : '')
+        h5= t('platform-options.vote')
+        .direct-vote
+          a.vote-option.vote-yes(href="#", data-platform=platform.id)
+            i.flaticon.solid.thumbs-up-1
+            span= t('platform-options.vote')
+
+        - if (!user.id)
+          p.text-mute.overlay-vote.hide= t('platform-options.must-be-signed-in') + '. '
+            a(href="/signin")= t('signin.login')
+            = ' ' + t('common.or') + ' '
+            a(href="/signup?reference=" + reference)= t('signin.signup')
+            = '.'
+
+      .votes-cast
+        em.text-muted= t('platform-options.votes-cast', { num: participants.length || "0" })
+

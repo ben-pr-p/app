@@ -1,0 +1,11 @@
+li(data-id=item.id, class=active ? 'active' : '')
+  a(href=item.url)
+    span.title= item.mediaTitle
+    //- span.created-by
+      if item.participants.length > 0
+        - var cardinality = 1 === item.participants.length ? 'singular' : 'plural'
+        div= item.participants.length + ' ' + t('proposal-article.participant.' + cardinality)
+      if item.closingAt
+        - var closed = item.closingAt && +new Date(item.closingAt) < Date.now()
+        span.time-ago-label= (closed ? t('common.closed') : t('common.close')) + ' '
+        span.meta-item.meta-timeago.ago(data-time=item.closingAt.toString())

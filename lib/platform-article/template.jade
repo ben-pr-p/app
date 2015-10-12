@@ -1,0 +1,54 @@
+- var closed = platform.closed
+.inner-container
+  - var learnMore = config.learnMoreUrl
+  - if (learnMore)
+    div.alert.alert-warning.alert-dismissable.system-alert
+      button(type="button", class="close", data-dismiss="alert", aria-hidden="true")
+      span #{t('platform-article.article.alert.text')}&nbsp;&nbsp;
+      a.alert-link(href=learnMore, target="_blank") #{t('platform-article.article.alert.learn-more')}
+
+
+  article.platform.commentable-container
+
+    h1=platform.mediaTitle
+    - if (platform.author)
+      h2.author=t('admin-topics-form.label.author') + ': '
+        - if (platform.authorUrl)
+          a(href=platform.authorUrl, target='_blank')=platform.author
+        - else
+          =platform.author
+    h3=platform.title
+    .entry-content
+      .body!= platform.body
+    //-   .clauses
+    //-     - var clauses = platform.clauses.slice(1)
+    //-     - if (clauses.length)
+    //-       - each clause, i in clauses
+    //-         - var classes = ['hide', 'clause']
+    //-         - classes.push(clause.empty ? '' : 'commentable-section')
+    //-         !=toHTML(clause, { className: classes, iframeResponsive: true })
+    //-   - if (platform.bodyTruncationText)
+    //-     a.read-more(href="#")= platform.bodyTruncationText
+    //-   - else
+    //-     a.read-more(href="#")= t('common.read-more')
+
+    //- Article source
+    - if (platform.source)
+      .source
+        p
+          span.glyphicon.glyphicon-link
+          a(target="_blank", href="#{platform.source}")
+           | #{t('platform-article.view-original-text')}
+
+    //- Article links
+    - if (platform.links && platform.links.length)
+      .links
+        h5=t('common.more-information')
+        - each link in platform.links
+          p
+            span.glyphicon.glyphicon-share
+            a(target="_blank", href=link.url)=link.text
+
+    Article participants
+    .participants()
+
