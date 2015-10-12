@@ -10,14 +10,13 @@
       div#voting-error.alert.alert-warning.hide #{t('platform-options.error.voting')}.
       .meta-data(class= !!user.id ? '' : 'hide')
         - if(~participants.indexOf(user.id))
-          include vote-positive
+          include vote-with
 
         a.meta-item.change-vote(href="#", class= voted && !closed ? '' : 'hide')
           i.icon-refresh
-          small #{t('platform-options.change-vote')}.
+          small #{t('platform-options.no-vote')}.
 
       .vote-options(class= voted || closed ? 'hide' : '')
-        h5= t('platform-options.vote')
         .direct-vote
           a.vote-option.vote-yes(href="#", data-platform=platform.id)
             i.flaticon.solid.thumbs-up-1
