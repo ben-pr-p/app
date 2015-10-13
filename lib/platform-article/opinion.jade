@@ -1,6 +1,6 @@
 div
   each opinion in opinions
-    a.topic-link
+    a(href=opinion.url).topic-link
       div.opinion(data-url=opinion.url)
         div.opinion-container
           span.title= opinion.label
