@@ -2,6 +2,13 @@
 
 .sidebar-platform-list
   .platform
+    
+    &:hover
+      background #eee
+    
+    &.targeted
+      border 1px solid black
+      border-radius 1px
 
     div.platform-container
       border-bottom 1px solid lighten(#BDC3C7, 40%)
@@ -28,8 +35,6 @@
         color #666
         background #fff
       
-      &:hover
-        background #eee
 
       padding-left spacing
       position relative
