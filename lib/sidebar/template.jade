@@ -3,7 +3,7 @@
     .sidebar-main-dropdown.btn-group
       button.btn.btn-default.current-department(type='button', data-sidebar-main-btn)
         - if (!current)
-          span.current-sidebar.pull-left= 'Choose a section'
+          span.current-sidebar.pull-left= t('sidebar.choose-section')
         - else
           span.current-sidebar.pull-left= current
         span.caret

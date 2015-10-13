@@ -11,12 +11,12 @@
         - if (filter.tag.name)
           span.current-tag.pull-left= filter.tag.name
       - else
-        span.current-tag.pull-left= 'Filter by tag'
+        span.current-tag.pull-left= t('sidebar.filter-by-tag')
       span.caret
     ul.topic-tag-dropdown-list
 
   .sidebar-topic-filter-collapse.btn-group
     div.expand
-      span.heading= 'Topics'
+      span.heading= t('topics')
       a.expand-button(data-expand-button)
         i.icon-angle-down
