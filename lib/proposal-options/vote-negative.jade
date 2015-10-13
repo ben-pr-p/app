@@ -2,6 +2,6 @@
   = t('proposal-options.voted-nay') + ' '
   - if (negatives)
     - var voteidx = negatives.map(function (v) {return v.author}).indexOf(user.id)
-    - if (negatives[voteidx].platform)
-      = t('proposal-options.voted-by-platform') + ' ' + negatives[voteidx].platform
+    - if (platform)
+      = t('proposal-options.voted-by-platform') + ' ' + platform
     = '.'

@@ -14,12 +14,6 @@
     .vote-box
       div#voting-error.alert.alert-warning.hide #{t('proposal-options.error.voting')}.
       .meta-data(class= !!user.id ? '' : 'hide')
-        - if(~positives.map(function (v) {return v.author}).indexOf(user.id))
-          include vote-positive
-        - else if (~negatives.map(function (v) {return v.author}).indexOf(user.id))
-          include vote-negative
-        - else if (~neutrals.map(function (v) {return v.author}).indexOf(user.id))
-          include vote-neutral
 
         a.meta-item.change-vote(href="#", class= voted && !closed ? '' : 'hide')
           i.icon-refresh

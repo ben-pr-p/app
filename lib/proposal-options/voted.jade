@@ -1,0 +1,10 @@
+- var positives = proposal.upvotes || []
+- var negatives = proposal.downvotes || []
+- var neutrals = proposal.abstentions || []
+
+- if(~positives.map(function (v) {return v.author}).indexOf(user.id))
+  include vote-positive
+- else if (~negatives.map(function (v) {return v.author}).indexOf(user.id))
+  include vote-negative
+- else if (~neutrals.map(function (v) {return v.author}).indexOf(user.id))
+  include vote-neutral

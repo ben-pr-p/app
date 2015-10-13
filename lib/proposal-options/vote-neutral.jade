@@ -2,6 +2,6 @@
   = t('proposal-options.voted-abstained') + ' '
   - if (neutrals)
     - var voteidx = neutrals.map(function (v) {return v.author}).indexOf(user.id)
-    - if (neutrals[voteidx].platform)
-      = t('proposal-options.voted-by-platform') + ' ' + neutrals[voteidx].platform
+    - if (platform)
+      = t('proposal-options.voted-by-platform') + ' ' + platform
     = '.'
