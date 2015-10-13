@@ -1,4 +1,5 @@
 div.platform.droppable(data-id=item.id)
   .platform-container.droppable
-    span.title.droppable= item.mediaTitle
+    a.platform-link(href=item.url)
+      span.title.droppable= item.mediaTitle
     input.active-checkbox.droppable(type='checkbox', name='active')
