@@ -10,6 +10,6 @@
       ul.sidebar-dropdown-list
         each sidebar in sidebars
           li(data-sidebar-name=sidebar, class= active ? 'active' : '')
-            a(href='#')= sidebar
+            a(href='#')= t('sidebar.' + sidebar)
 
   .sidebar-container
