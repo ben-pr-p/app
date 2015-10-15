@@ -1,17 +1,19 @@
-div.tooltip-container
+.tooltip-container
   each opinion in opinions
-    div.opinion(data-url=opinion.url)
-      div.opinion-container
-        a.topic-link
-          span.title= opinion.label
-        - if (opinion.value == 'positive')
-          a.opinion-option.yes(data-opinion-yes)
-            i.flaticon.solid.thumbs-up
-        - if (opinion.value == 'neutral')
-          a.opinion-option.abstain(data-opinion-abstain)
-            i.flaticon.solid.pause
-        - if (opinion.value == 'negative')
-          a.opinion-option.no(data-option-no)
-            i.flaticon.solid.thumbs-up
-        - if (singleSet)
-          a.close.remove-opinion= "x"
+    .tooltip-opinion(data-url=opinion.url)
+      .tooltip-opinion-container
+        .topic-link
+          a
+            span.title= opinion.label
+        .tooltip-option-container
+          - if (opinion.value == 'positive')
+            a.tooltip-opinion-option.yes(data-opinion-yes)
+              i.flaticon.solid.thumbs-up
+          - if (opinion.value == 'neutral')
+            a.tooltip-opinion-option.abstain(data-opinion-abstain)
+              i.flaticon.solid.pause
+          - if (opinion.value == 'negative')
+            a.tooltip-opinion-option.no(data-option-no)
+              i.flaticon.solid.thumbs-up
+          - if (singleSet)
+            a.close.remove-opinion= "x"
