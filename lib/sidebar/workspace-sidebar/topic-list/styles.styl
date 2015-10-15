@@ -12,13 +12,16 @@
       cursor pointer
       padding-right 30px
 
-      span.title
-        font-size 15px
-        line-height 19px
-        font-weight bold
-        display block
-        margin-bottom 0px
-        padding-right 20px
+      .topic-link
+        float left
+        min-width 150px
+        
+        span.title
+          font-size 15px
+          line-height 19px
+          font-weight bold
+          margin-bottom 0px
+          padding-right 20px
 
       &.active
         color black
@@ -31,41 +34,48 @@
       &:hover
         background #eee
             
-      .opinion-option
-        color white
-        padding-top 5px
-        padding-bottom 5px
-        padding-left 5px
-        padding-right 5px
-        border-radius 3px
-        text-decoration none
-        max-height 25px
+      .opinion-option-container
+        float right    
+        flexbox(flex)
+        flex-direction(row)
+        flex-justify(space-between)
+        min-width 80px
 
-        &.yes
-          background-color #a4cb53
-          &:hover, &.selected
-            background-color darken(#a4cb53, 40%)
-          &.unselected
-            background-color lighten(#a4cb53, 40%)
+        .opinion-option
+          color white
+          padding-top 5px
+          padding-bottom 5px
+          padding-left 5px
+          padding-right 5px
+          border-radius 3px
+          text-decoration none
+          max-height 25px
 
-        &.no
-          background-color #d95e59
-          &:hover, &.selected
-            background-color darken(#d95e59, 40%)
-          &.unselected
-            background-color lighten(#d95e59, 40%)
-          i
-            display block
-            transform s("rotate(%s)", 180deg)
-            -ms-transform s("rotate(%s)", 180deg) /* IE 9 */
-            -webkit-transform s("rotate(%s)", 180deg)
+          &.yes
+            background-color #a4cb53
+            &:hover, &.selected
+              background-color darken(#a4cb53, 40%)
+            &.unselected
+              background-color lighten(#a4cb53, 40%)
 
-        &.abstain
-          background-color #666
-          &:hover, &.selected
-            background-color darken(#666666, 40%)
-          &.unselected
-            background-color lighten(#666666, 40%)
+          &.no
+            background-color #d95e59
+            &:hover, &.selected
+              background-color darken(#d95e59, 40%)
+            &.unselected
+              background-color lighten(#d95e59, 40%)
+            i
+              display block
+              transform s("rotate(%s)", 180deg)
+              -ms-transform s("rotate(%s)", 180deg) /* IE 9 */
+              -webkit-transform s("rotate(%s)", 180deg)
+
+          &.abstain
+            background-color #666
+            &:hover, &.selected
+              background-color darken(#666666, 40%)
+            &.unselected
+              background-color lighten(#666666, 40%)
 
 .dragging
   .unselected

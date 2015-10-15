@@ -2,10 +2,12 @@
 
 div.topic(data-id=item.id)
   div.topic-container
-    span.title= item.mediaTitle
-    a.opinion-option.yes(href='#', data-opinion-yes)
-      i.flaticon.solid.thumbs-up
-    a.opinion-option.abstain(href='#', data-opinion-abstain)
-      i.flaticon.solid.pause
-    a.opinion-option.no(href='#', data-option-no)
-      i.flaticon.solid.thumbs-up
+    .topic-link
+      span.title= item.mediaTitle
+    .opinion-option-container
+      a.opinion-option.yes(href='#', data-opinion-yes)
+        i.flaticon.solid.thumbs-up
+      a.opinion-option.abstain(href='#', data-opinion-abstain)
+        i.flaticon.solid.pause
+      a.opinion-option.no(href='#', data-option-no)
+        i.flaticon.solid.thumbs-up
