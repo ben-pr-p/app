@@ -163,7 +163,8 @@
     "xss": "0.2.2",
     "d3": "3.5.6",
     "drag-drop-dom": "1.0.2",
-    "venn.js": "git://github.com/benfred/venn.js.git"
+    "venn.js": "git://github.com/benfred/venn.js.git",
+    "dragula": "3.5.2"
   },
   "devDependencies": {
     "nomnom": "^1.8.1",
@@ -186,5 +187,10 @@
     "build": "gulp build",
     "watch": "gulp watch",
     "clean": "gulp clean"
+  },
+  "browser": {
+    "selectize": "./vendor/bower/selectize/dist/js/selectize.js",
+    "sifter": "./vendor/bower/sifter/sifter.js",
+    "microplugin": "./vendor/bower/microplugin/src/microplugin.js"
   }
 }
