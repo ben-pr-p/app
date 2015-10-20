@@ -3,19 +3,15 @@
 border_radius = 3px
 /* Topic view
 -------------------------------------------------- */
-article.proposal
+article.platform
   margin 40px auto
-  min-height 300px
+  min-height 200px
   font-size 18px
   line-height 1.5
   position relative
 
   .entry-content
     font-family "Noto Serif", serif
-
-  a:hover
-    color #428bca
-    text-decoration underline
 
   img
     max-width 100%
@@ -171,9 +167,10 @@ article.proposal
     border none
 
 .opinion
-  a
+  .topic-link
     color #666
     text-decoration none
+    position relative
 
   .opinion-container
     .remove-opinion
@@ -191,6 +188,8 @@ article.proposal
       background-color darken(#eee, 20%)
 
     span.title
+      bottom 0
+      position absolute
       font-size 15px
       line-height 19px
       font-weight bold
@@ -206,8 +205,7 @@ article.proposal
       padding-right 5px
       border-radius 3px
       text-decoration none
-      max-height 25px
-      max-height 25px
+      max-height 30px
 
       &.yes
         background-color #a4cb53
