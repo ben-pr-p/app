@@ -18,5 +18,6 @@
           - if (singleSet)
             a.close.remove-opinion= "x"
   .platform-tree-container
-    - if (!(platformTree.length == 1 && platformTree[0] == ""))
-      span= t("tooltip.includes")
+    - if (platformTree)
+      - if (!(platformTree.length == 1 && platformTree[0] == ""))
+        span= t("tooltip.includes")
