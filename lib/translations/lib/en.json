@@ -110,6 +110,7 @@
   "admin-platforms-form.label.platformId": "Official Id",
   "admin-platforms-form.label.global": "Global",
   "admin-platforms-form.label.create-from-others": "Build your platform off of other platforms by using set operations",
+  "admin-platforms-form.label.instructions": "Drag a platform or operation above into the section below",
   "admin-platforms-form.link.confirmation.title": "Link removal",
   "admin-platforms-form.message.add-link-forbidden": "Platform must be saved before adding links",
   "admin-platforms-form.message.onsuccess": "Platform successfuly saved",

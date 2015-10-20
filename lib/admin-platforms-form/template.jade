@@ -52,10 +52,11 @@
             .option(value=')')
               span.platform-title= ')'
           input.form-control#platform-options-search(placeholder='#{t("admin-platforms.list.search.placeholder")}')
-          span.input-group-addon
+          span.input-group-addon(style='width:auto')
             i.glyphicon.glyphicon-search
         #platform-options-container
 
+        label= t('admin-platforms-form.label.instructions')
         #platformTree.platforms-select.form-control
         input.form-control.hide(name='platformTree', value=platform.platformTree ? platform.platformTree.string : null, tabindex=8, validate='treesyntax')
   .col-md-3.commands
