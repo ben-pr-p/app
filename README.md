@@ -1,4 +1,7 @@
-# DemocracyOS ![Dependencies](https://david-dm.org/DemocracyOS/app.svg) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DemocracyOS/app) [![Code Climate](https://codeclimate.com/github/DemocracyOS/app/badges/gpa.svg)](https://codeclimate.com/github/DemocracyOS/app)
+# DemocracyOS [![Deploy](https://www.herokucdn.com/deploy/button.png)](http://bit.ly/1KvH82I)
+[![Dependencies](https://david-dm.org/DemocracyOS/app.svg)](https://david-dm.org/DemocracyOS/app.svg)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DemocracyOS/app)
+[![Code Climate](https://codeclimate.com/github/DemocracyOS/app/badges/gpa.svg)](https://codeclimate.com/github/DemocracyOS/app)
 
 DemocracyOS is an online space for deliberation and voting on political proposals. It is a platform for a more open and participatory government.The software aims to stimulate better arguments and come to better rulings, as peers.
 
@@ -47,4 +50,4 @@ Tag icons made by Yannick from [flaticon.com](http://www.flaticon.com) licensed 
 
 ## License
 
-DemocracyOS is open source software under the MIT license. Please see full terms in the [LICENSE.txt](https://github.com/DemocracyOS/app/blob/development/LICENSE.txt) file.
+DemocracyOS is open source software under the GPL v3.0 license. Please see full terms in the [LICENSE.txt](LICENSE.txt) file.

@@ -6,7 +6,6 @@
   "mongoUrl": "mongodb://localhost/DemocracyOS-dev",
   "mongoUsersUrl": "",
   "jwtSecret": "Generate a secret token and paste it here.",
-  "deploymentId": "",
   "corsDomains": [],
   "signinUrl": "",
   "signupUrl": "",
@@ -14,6 +13,7 @@
   "staff": [],
   "allowEmailAliases": true,
   "facebookSignin": false,
+  "publicEmails": false,
   "auth": {
     "basic": {
       "username": "",
@@ -133,5 +133,6 @@
     "sv",
     "uk",
     "zh_TW"
-  ]
+  ],
+  "enforceLocale": false
 }
