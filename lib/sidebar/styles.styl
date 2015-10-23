@@ -2,9 +2,10 @@
 @import './topic-sidebar/styles'
 @import './platform-sidebar/styles'
 
-#outer-container, .sidebar-container
-  flexbox(flex)
-  flex-direction(column)
+#outer-container
+  
+  .sidebar-container
+    overflow auto
   
 .sidebar-main-filter
   padding 15px 20px 5px
@@ -98,5 +99,3 @@
 
         &:hover
           background-color rgba(#f1f1f1, .2)
-
-

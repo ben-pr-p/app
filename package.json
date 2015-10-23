@@ -158,7 +158,6 @@
     "xss": "0.2.2",
     "yargs": "3.9.1",
     "d3": "3.5.6",
-    "drag-drop-dom": "1.0.2",
     "venn.js": "git://github.com/benfred/venn.js.git",
     "dragula": "3.5.2"
   },
