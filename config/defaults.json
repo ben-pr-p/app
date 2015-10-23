@@ -110,7 +110,7 @@
   "visibility": "visible",
   "usersWhitelist": false,
   "platforms": true,
-  "multiForum": false,
+  "multiForum": true,
   "feedsLimit": 10,
   "tweetText": "",
   "forceSafeImageURLs": true,
