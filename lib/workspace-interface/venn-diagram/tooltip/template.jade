@@ -1,0 +1,23 @@
+.tooltip-container
+  each opinion in opinions
+    .tooltip-opinion(data-url=opinion.url)
+      .tooltip-opinion-container
+        .topic-link
+          a
+            span.title= opinion.label
+        .tooltip-option-container
+          - if (opinion.value == 'positive')
+            a.tooltip-opinion-option.yes(data-opinion-yes)
+              i.flaticon.solid.thumbs-up
+          - if (opinion.value == 'neutral')
+            a.tooltip-opinion-option.abstain(data-opinion-abstain)
+              i.flaticon.solid.pause
+          - if (opinion.value == 'negative')
+            a.tooltip-opinion-option.no(data-option-no)
+              i.flaticon.solid.thumbs-up
+          - if (singleSet)
+            a.close.remove-opinion= "x"
+  .platform-tree-container
+    - if (platformTree)
+      - if (!(platformTree.length == 1 && platformTree[0] == ""))
+        span= t("tooltip.includes")
