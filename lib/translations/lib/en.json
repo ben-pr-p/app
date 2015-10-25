@@ -416,5 +416,9 @@
   "validators.min-length.singular": "It must be at least 1 character",
   "validators.not.match": "No match",
   "validators.password.not.match": "Passwords do not match",
-  "validators.required": "Required"
+  "validators.required": "Required",
+  "workspace.need-opinion": "Need an opinion",
+  "workspace.click-icon": "You need select an opinion on a topic in order to add it to a platform. Click on one of the icons near the title.",
+  "workspace.not-admin": "You need to be an admin to perform that action",
+  "workspace.contact-admin": "Platforms can only be modified by the platform creators"
 }
