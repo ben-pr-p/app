@@ -1,15 +1,9 @@
 #outer-container
   .sidebar-main-filter
-    .sidebar-main-dropdown.btn-group
-      button.btn.btn-default.current-department(type='button', data-sidebar-main-btn)
-        - if (!current)
-          span.current-sidebar.pull-left= t('sidebar.choose-section')
-        - else
-          span.current-sidebar.pull-left= current
-        span.caret
-      ul.sidebar-dropdown-list
-        each sidebar in sidebars
-          li(data-sidebar-name=sidebar, class= active ? 'active' : '')
-            a(href='#')= t('sidebar.' + sidebar)
+    .sidebar-options-container
+      each sidebar in sidebars
+        .sidebar-icon(data-sidebar-name=sidebar, class= active ? 'active' : '')
+          a(href='#')
+            img(src=`/boot/${sidebar}.svg`)
 
   .sidebar-container
