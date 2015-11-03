@@ -8,6 +8,7 @@
   .topic-container
     flexbox(flex)
     flex-justify(space-between)
+    flex-align(center)
     padding-top 10px
     padding-bottom 10px
     padding-right 30px
@@ -16,6 +17,8 @@
     .topic-link
       float left
       min-width 126px
+      text-decoration none
+      color #666
       
       span.title
         font-size 15px
@@ -79,13 +82,13 @@
             background-color lighten(#666666, 40%)
 
 .gu-mirror
-  border 0px
-  background-color #eee
+  box-shadow 5px 5px 5px #BBB
 
 .drag-handle
-  max-height 20px
-  max-width 20px
-  color white
-  // background-color lighten(#666, 80%)
+  max-height 18px
+  max-width 18px
   border-radius 5px
   margin-right 10px
+  border 1px solid #BDC3C7
+  padding 2px 2px 2px 2px
+  box-shadow 1px 1px 1px #888

@@ -3,7 +3,7 @@
 div.topic-item(data-id=item.id)
   div.topic-container
     img.drag-handle(src='/boot/drag.svg', style='cursor:move')
-    .topic-link
+    a(href=item.url).topic-link
       span.title= item.mediaTitle
     .opinion-option-container
       a.opinion-option.yes(href='#', data-opinion-yes)
