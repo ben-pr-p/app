@@ -2,7 +2,6 @@
 
 #sidebar-workspace-topic-list
   overflow scroll
-  box-shadow 1px 1px 1px #bbb inset
 
 .topic-item
 
@@ -27,6 +26,10 @@
         font-weight bold
         margin-bottom 0px
         padding-right 20px
+
+    &.active
+      color black
+      background #fff
 
     padding-left spacing
     position relative
@@ -80,15 +83,6 @@
 
 .gu-mirror
   box-shadow 5px 5px 5px #BBB
-  background-color #ecf0f1
-  opacity 0.5
-  
-  .unselected
-    opacity 1
-  
-  .topic-link
-    opacity 1
-    
 
 .drag-handle
   max-height 18px
