@@ -1,0 +1,60 @@
+@import './node-edit/styles.styl'
+
+.node-card
+  border 1px solid #bbb
+  background-color #eee
+  color #666
+  width 266px
+  
+  .node-title-container
+    height 45px
+    
+    .node-avatar
+      span.pull-left
+        img.avatar
+          max-height 45px
+          max-width 45px
+
+    span.node-title
+      font-size 15px
+      line-height 19px
+      font-weight bold
+      margin-bottom 0px
+      padding-right 20px
+    
+    .node-reply
+      text-decoration none
+      color #666
+      margin-top 25px
+      padding-right 5px
+      bottom 0
+      position static
+  
+  .reply-options-container
+    width auto
+    background-color #eee
+    
+    .reply-options
+      .option
+        height 25px
+        cursor pointer
+        
+        &.chosen
+          background-color darken(#eee, 15%)
+        
+        .little-button
+          height 15px
+          width 15px
+          border-radius 5px
+          float left
+        
+        .reply-opt
+          font-size 15px
+          line-height 19px
+          font-weight bold
+
+  .node-body-container
+    display none
+
+    &.selected
+      display block

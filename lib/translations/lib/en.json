@@ -179,6 +179,8 @@
   "common.cancel": "Cancel",
   "common.close": "Closes",
   "common.closed": "Closed",
+  "common.title": "Title",
+  "common.body": "Body",
   "common.edit": "Edit",
   "common.more-information": "More information",
   "common.no-user-for-email": "No user found for that email address",

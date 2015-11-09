@@ -1,0 +1,18 @@
+.node-box
+  .node-card
+    .node-title-container
+      .node-avatar
+        span.pull-left
+          img.avatar(src=node.author.avatar, title=node.author.displayName)
+      span.node-title= node.title
+      a.node-reply.pull-right(href="#" title="Reply to this argument")
+        i.icon-reply
+    .node-body-container
+      span.node-body= node.body
+    .reply-options-container.hide
+      .reply-options
+        each option in edgesTo
+          .option(data-reply-name=option.name)
+            span.reply-opt=option.name
+              a.little-button(style=`background-color: ${option.color}`)
+    .reply-form-container
