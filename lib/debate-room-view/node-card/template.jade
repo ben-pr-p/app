@@ -1,9 +1,9 @@
 .node-box(data-node-id=node.id)
   .node-card
     .node-title-container
-      .node-avatar
-        span.pull-left
-          img.avatar(src=node.author.avatar, title=node.author.displayName)
+      .author-container
+        img.avatar(src=node.author.avatar, title=node.author.displayName)
+        //- span.author-name=node.author.displayName
       span.node-title= node.title
       a.node-reply.pull-right(href="#" title="Reply to this argument")
         i.icon-reply

@@ -5,21 +5,28 @@
   background-color #eee
   color #666
   width 266px
+  border-radius 5px
+  box-shadow 1px 5px #bbb
   
   .node-title-container
     height 45px
     
-    .node-avatar
-      span.pull-left
-        img.avatar
-          max-height 45px
-          max-width 45px
+    .author-container
+      float left
+      padding-bottom 5px
+
+      img.avatar
+        max-height 45px
+        max-width 45px
+      
+      .author-name
+        font-size 12px
+        font-weight bold
 
     span.node-title
       font-size 15px
-      line-height 19px
       font-weight bold
-      margin-bottom 0px
+      line-height 19px
       padding-right 20px
     
     .node-reply
