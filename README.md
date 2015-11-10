@@ -1,4 +1,4 @@
-# DemocracyOS [![Deploy](https://www.herokucdn.com/deploy/button.png)](http://bit.ly/1PGomtT)
+# DemocracyOS [![Deploy](https://www.herokucdn.com/deploy/button.png)](http://bit.ly/1iHAcWz)
 [![Dependencies](https://david-dm.org/DemocracyOS/app.svg)](https://david-dm.org/DemocracyOS/app.svg)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DemocracyOS/app)
 [![Code Climate](https://codeclimate.com/github/DemocracyOS/app/badges/gpa.svg)](https://codeclimate.com/github/DemocracyOS/app)
@@ -7,8 +7,11 @@ DemocracyOS is an online space for deliberation and voting on political proposal
 
 Check out the [live DemocracyOS demo](http://demo.democracyos.org).
 
-![DemocracyOS](https://i.cloudup.com/F7G3UjbWBx.gif)
+![DemocracyOS](https://cldup.com/5UCVpUnOhO.png)
 
+## Requirements
+
+* Node.js v4
 
 ## Installation
 Please refer to the [Installation](https://github.com/DemocracyOS/app/wiki/Installation) wiki page for detailed instructions on how to install and setup your instance of DemocracyOS.
