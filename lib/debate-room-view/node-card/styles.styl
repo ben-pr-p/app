@@ -1,13 +1,21 @@
 @import './node-edit/styles.styl'
 
 .node-card
-  border 1px solid #bbb
+  border 1px solid #888
   background-color #eee
   color #666
   width 266px
   border-radius 5px
   box-shadow 3px 3px #ccc
   padding 5px
+  
+  &:hover
+    border 2px solid #888
+    box-shadow 3px 3px #999
+  
+  &.selected
+    border 2px solid #888
+    box-shadow 3px 3px #999
     
   .avatar-container
     float left
@@ -27,11 +35,6 @@
 
   .node-body-container
     font-size 12px
-    
-    .author-name
-      font-weight bold
-      padding-right 5px
-
     display block
     height 45px
     overflow hidden
@@ -41,6 +44,10 @@
       height auto
       min-height 45px
       max-height 200px
+    
+    .author-name
+      font-weight bold
+      padding-right 5px
   
   .reply-options-container
     width auto
