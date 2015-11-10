@@ -1,18 +1,16 @@
 .node-box(data-node-id=node.id)
   .node-card
-    .node-title-container
-      .author-container
-        img.avatar(src=node.author.avatar, title=node.author.displayName)
-        //- span.author-name=node.author.displayName
-      span.node-title= node.title
-      a.node-reply.pull-right(href="#" title="Reply to this argument")
-        i.icon-reply
+    .avatar-container
+      img.avatar(src=node.author.avatar, title=node.author.displayName)
+    a.node-reply.pull-right(href="#" title="Reply to this argument")
+      i.icon-reply
     .node-body-container
+      span.author-name= node.author.displayName
       span.node-body= node.body
     .reply-options-container.hide
       .reply-options
         each option in edgesTo
           .option(data-reply-name=option.name)
+            a.little-button(style=`background-color: ${option.color}`)
             span.reply-opt=option.name
-              a.little-button(style=`background-color: ${option.color}`)
     .reply-form-container

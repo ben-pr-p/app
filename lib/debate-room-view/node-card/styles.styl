@@ -6,36 +6,41 @@
   color #666
   width 266px
   border-radius 5px
-  box-shadow 1px 5px #bbb
+  box-shadow 3px 3px #ccc
+  padding 5px
+    
+  .avatar-container
+    float left
+    padding-bottom 5px
+    padding-right 5px
+
+    img.avatar
+      max-height 40px
+      max-width 40px
   
-  .node-title-container
-    height 45px
+  .node-reply
+    text-decoration none
+    color #666
+    padding 5px
+    bottom 0
+    position static
+
+  .node-body-container
+    font-size 12px
     
-    .author-container
-      float left
-      padding-bottom 5px
-
-      img.avatar
-        max-height 45px
-        max-width 45px
-      
-      .author-name
-        font-size 12px
-        font-weight bold
-
-    span.node-title
-      font-size 15px
+    .author-name
       font-weight bold
-      line-height 19px
-      padding-right 20px
-    
-    .node-reply
-      text-decoration none
-      color #666
-      margin-top 25px
       padding-right 5px
-      bottom 0
-      position static
+
+    display block
+    height 45px
+    overflow hidden
+    text-overflow ellipsis
+    
+    &.selected
+      height auto
+      min-height 45px
+      max-height 200px
   
   .reply-options-container
     width auto
@@ -45,23 +50,24 @@
       .option
         height 25px
         cursor pointer
+        flexbox(flex)
+        flex-align(center)
+        flex-items(center)
+        flex-direction(row)
+        border-radius 5px
         
         &.chosen
-          background-color darken(#eee, 15%)
-        
+          background-color darken(#eee, 10%)
+                  
         .little-button
           height 15px
           width 15px
           border-radius 5px
+          padding 5px
+          margin 5px
           float left
         
         .reply-opt
-          font-size 15px
+          font-size 12px
           line-height 19px
           font-weight bold
-
-  .node-body-container
-    display none
-
-    &.selected
-      display block

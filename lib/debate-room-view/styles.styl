@@ -32,7 +32,28 @@
     
   foreignObject
     -webkit-user-select none
-    
+  
+  .controls
+    position fixed
+
+    .control-button
+      height 30px
+      width 30px
+      padding 3px
+      border 1px solid #bbb
+      border-radius 5px
+      cursor pointer
+      box-shadow 1px 1px #ddd
+      
+      &:hover
+        background-color #f8f8f8
+      
+      &:active
+        background-color #f0f0f0
+        box-shadow 2px 2px #ddd
+      
+      &.search-button
+        padding 6px
 
 .node-box
   -webkit-user-select none
