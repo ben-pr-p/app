@@ -1,12 +1,18 @@
 .node-box(data-node-id=node.id)
   .node-card
     .avatar-container
-      img.avatar(src=node.author.avatar, title=node.author.displayName)
-    a.node-reply.pull-right(href="#" title="Reply to this argument")
-      i.icon-reply
+      - if (node.itemImage)
+        img.tag(src=tagImages[node.itemImage].url)
+      - else
+        img.avatar(src=(node.itemImage) ? tagImages[node.itemImage].url : node.author.avatar, title=node.author.displayName)
+    .action-container.pull-right
+      a.node-reply(href="#" title="Reply to this argument")
+        i.icon-reply
+      a.node-expand(data-node-expand-button)
+        i.icon-angle-down
     .node-body-container
-      span.author-name= node.author.displayName
-      span.node-body= node.body
+      span.author-name= node.itemTitle || (node.itemAuthor || node.author.displayName)
+      .node-body!= node.body
     .reply-options-container.hide
       .reply-options
         each option in edgesTo
