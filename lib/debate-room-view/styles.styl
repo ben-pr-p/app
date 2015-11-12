@@ -35,15 +35,26 @@
   
   .controls
     position fixed
+    height 30px
+    flexbox(flex)
+    flex-direction(row)
 
     .control-button
-      height 30px
+      flexbox(flex)
+      flex-direction(row)
+      flex-align(center)
+      flex-items(center)
+      
       width 30px
       padding 3px
       border 1px solid #bbb
       border-radius 5px
       cursor pointer
       box-shadow 1px 1px #ddd
+      
+      img
+        width 20px
+        height 20px
       
       &:hover
         background-color #f8f8f8
@@ -54,6 +65,13 @@
       
       &.search-button
         padding 6px
+        width auto
+    
+        input.search-field
+          background-color inherit
+          width 200px
+          padding 3px
+          border 0px
 
 .node-box
   -webkit-user-select none

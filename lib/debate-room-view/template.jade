@@ -1,5 +1,8 @@
 .debate-room-container
   svg#debate-room
   .controls
-    img.control-button.center-button(src='/boot/center.svg')
-    img.control-button.search-button(src='/boot/search.svg')
+    .control-button.center-button
+      img(src='/boot/center.svg')
+    .control-button.search-button
+      img(src='/boot/search.svg')
+      input.search-field.hide(type='text', placeholder='#{t("debate-room.search.placeholder")}', autofocus)
