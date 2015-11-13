@@ -159,8 +159,7 @@
     "yargs": "3.9.1",
     "d3": "3.5.6",
     "venn.js": "git://github.com/benfred/venn.js.git",
-    "dragula": "3.5.2",
-    "sylvester": "0.0.21"
+    "dragula": "3.5.2"
   },
   "devDependencies": {
     "nomnom": "^1.8.1",
