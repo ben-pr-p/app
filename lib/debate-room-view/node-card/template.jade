@@ -11,6 +11,10 @@
     .node-body-container
       span.author-name= node.itemTitle || (node.itemAuthor || node.author.displayName)
       .node-body!= node.body
+      //- - var nbc = document.querySelector(`[data-node-id=${node.id}]`).querySelector('.node-body-container')
+      //- - if (nbc.scrollHeight > nbc.style.maxHeight)
+      //-   a(href='/#{node.referenceType}/#{node.reference}')
+      //-     span.read-more= t('common.read-more')
     .reply-options-container.hide
       .reply-options
         each option in edgesTo
