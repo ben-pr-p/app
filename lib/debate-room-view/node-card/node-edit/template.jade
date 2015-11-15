@@ -2,8 +2,8 @@
 
 .node-edit
   if (logged)
-    form.node-edit-form(action='#', autovalidate='autovalidate')
-      textarea.node-body(tabindex='1')= node.body
+    form.node-edit-form(action='#', autovalidate='autovalidate', edit-node=node.id)
+      textarea.node-edit-body(tabindex='1')= node.body
       - var buttonVal = t('common.ok')
       input.btn.form-submit.pull-right(type='submit', value=buttonVal, tabindex='2')
       input.btn.btn-cancel.pull-right(type='button', value=t('common.cancel'), tabindex='3')

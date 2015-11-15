@@ -6,7 +6,12 @@
       - else
         img.avatar(src=(node.itemImage) ? tagImages[node.itemImage].url : node.author.avatar, title=node.author.displayName)
     .action-container.pull-right
-      a.node-reply(href="#" title="Reply to this argument")
+      - if (!node.itemAuthor && (user.id == node.author.id))
+        a.node-edit-icon.card-icon(href='#', title="Edit this argument")
+          i.icon-pencil
+        a.node-remove-icon.card-icon(href='#', title="Delete this argument")
+          i.icon-remove
+      a.node-reply-icon.card-icon(href="#", title="Reply to this argument")
         i.icon-reply
     .node-body-container
       span.author-name= node.itemTitle || (node.itemAuthor || node.author.displayName)

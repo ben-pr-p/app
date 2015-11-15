@@ -13,10 +13,12 @@
     border 1px solid #555
     box-shadow 4px 4px #999
   
-  &.selected
+  &.matches
     border 2px solid #888
     box-shadow 3px 3px #999
   
+  &.selected
+    border 2px solid #ADD8E6
     
   .avatar-container
     float left
@@ -36,19 +38,13 @@
   
   .action-container
     flexbox(flex)
-    flex-direction(column)
-
-    .node-reply
-      text-decoration none
-      color #666
+    flex-direction(row)
     
-    .node-expand
+    .card-icon
       text-decoration none
-      font-weight bold
       color #666
-      bottom 0
-      font-size 20px
-  
+      padding-right 2px
+    
   .node-body-container
     font-size 12px
     display block
