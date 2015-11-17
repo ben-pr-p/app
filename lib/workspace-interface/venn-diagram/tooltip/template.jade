@@ -20,4 +20,4 @@
   .platform-tree-container
     - if (platformTree)
       - if (!(platformTree.length == 1 && platformTree[0] == ""))
-        span= t("tooltip.includes")
+        span(style='font-weight: bold;')= t("tooltip.includes")

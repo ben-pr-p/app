@@ -56,3 +56,6 @@
 
     //- Article platform tree
     .platform-tree-container
+      - if (platform.platformTree)
+        - if (!(platform.platformTree.string.length == 0))
+          span(style='font-weight: bold;')= t("tooltip.includes")
