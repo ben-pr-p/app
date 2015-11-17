@@ -11,11 +11,13 @@
       - else
         img.avatar(src=(node.itemImage) ? tagImages[node.itemImage].url : node.author.avatar, title=node.author.displayName)
       .node-vote
-        span.counter= count
-        a.vote.up(href="#", title=t('comment-vote.upvote'), class= (positive) ? 'voted' : '')
-          i.icon-angle-up
-        a.vote.down(href="#", title=t('comment-vote.downvote'), class= (negative) ? 'voted' : '')
-          i.icon-angle-down
+        .count-container
+          span.counter= count
+        .vote-container
+          a.vote.up(href="#", title=t('comment-vote.upvote'), class= (positive) ? 'voted' : '')
+            i.icon-angle-up
+          a.vote.down(href="#", title=t('comment-vote.downvote'), class= (negative) ? 'voted' : '')
+            i.icon-angle-down
     .node-body-container
       .action-container.pull-right
         .action-items

@@ -63,9 +63,13 @@
     
         input.search-field
           background-color inherit
-          width 200px
+          max-width 300px
           padding 3px
           border 0px
+          display none
+        
+          &.shown
+            display block
 
 .node-box
   -webkit-user-select none

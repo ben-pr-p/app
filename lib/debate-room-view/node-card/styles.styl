@@ -8,6 +8,7 @@
   border-radius 5px
   box-shadow 3px 3px #ccc
   padding 5px
+  min-height 70px
   
   &:hover
     border 1px solid #555
@@ -17,14 +18,17 @@
     border 2px solid #888
     box-shadow 3px 3px #999
   
-  &.selected
+  &.keyselected
     border 2px solid #ADD8E6
+    
+  &.selected
+    min-height 90px
     
   .avatar-container
     float left
     padding-bottom 5px
     padding-right 5px
-    height 70px
+    min-height 70px
     flexbox(flex)
     flex-direction(column)
     flex-justify(space-between)
@@ -42,25 +46,38 @@
     
     .node-vote
       flexbox(flex)
-      flex-direction(row)
-      flex-justify(space-between)
+      flex-direction(column)
       font-weight bold
       width 100%
-      height 5px
+      height 20px
       padding-bottom 25px
       
-      .vote
-        font-weight bold
-        font-size 20px
-        color #666
-        
-        &.up
-          &:hover, &.voted
-            color green
-        
-        &.down
-          &:hover, &.voted
-            color red
+      .count-container
+        flexbox(flex)
+        flex-direction(row)
+        flex-justify(center)
+
+      .vote-container
+        flexbox(flex)
+        flex-direction(row)
+        flex-justify(space-around)
+
+        .vote
+          display none
+          font-weight bold
+          font-size 20px
+          color #666
+          
+          &.selected
+            display block
+          
+          &.up
+            &:hover, &.voted
+              color green
+          
+          &.down
+            &:hover, &.voted
+              color red
   
   .action-container
     flexbox(flex)
@@ -89,11 +106,13 @@
     
     .node-body
       clear left
-      height 45px
+      transition max-height 0.05s ease-out
+      min-height 45px
+      max-height 45px
       
     &.selected
       .node-body
-        height auto
+        transition max-height 0.05s ease-in
         min-height 45px
         max-height 300px
   
@@ -108,6 +127,7 @@
     
     .reply-options
       .option
+        clear left
         height 25px
         cursor pointer
         flexbox(flex)
