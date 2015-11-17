@@ -14,9 +14,12 @@
       a.node-reply-icon.card-icon(href="#", title="Reply to this argument")
         i.icon-reply
     .node-body-container
-      span.author-name= node.itemTitle || (node.itemAuthor || node.author.displayName)
+      - if (node.itemTitle)
+        a(href='/#{node.referenceType}/#{node.reference}', style='text-decoration: none; color: inherit;')
+          span.author-name= node.itemTitle
+      - else
+        span.author-name= (node.itemAuthor || node.author.displayName)
       .node-body!= node.body
-
     - if (node.itemTitle)
       a.read-more-link.hide(href='/#{node.referenceType}/#{node.reference}')
         span.read-more= t('common.read-more')
