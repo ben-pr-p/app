@@ -1,3 +1,8 @@
+- var userVote = node.votes.filter(v => v.caster == user.id)[0]
+- if (userVote)
+  - var positive = (userVote.value == 'positive')
+  - var negative = (userVote.value == 'negative')
+
 .node-box(data-node-id=node.id)
   .node-card
     .avatar-container
@@ -5,15 +10,22 @@
         img.tag(src=tagImages[node.itemImage].url)
       - else
         img.avatar(src=(node.itemImage) ? tagImages[node.itemImage].url : node.author.avatar, title=node.author.displayName)
-    .action-container.pull-right
-      - if (!node.itemAuthor && (user.id == node.author.id))
-        a.node-edit-icon.card-icon(href='#', title="Edit this argument")
-          i.icon-pencil
-        a.node-remove-icon.card-icon(href='#', title="Delete this argument")
-          i.icon-remove
-      a.node-reply-icon.card-icon(href="#", title="Reply to this argument")
-        i.icon-reply
+      .node-vote
+        span.counter= count
+        a.vote.up(href="#", title=t('comment-vote.upvote'), class= (positive) ? 'voted' : '')
+          i.icon-angle-up
+        a.vote.down(href="#", title=t('comment-vote.downvote'), class= (negative) ? 'voted' : '')
+          i.icon-angle-down
     .node-body-container
+      .action-container.pull-right
+        .action-items
+          - if (!node.itemAuthor && (user.id == node.author.id))
+            a.node-edit-icon.card-icon(href='#', title="Edit this argument")
+              i.icon-pencil
+            a.node-remove-icon.card-icon(href='#', title="Delete this argument")
+              i.icon-remove
+          a.node-reply-icon.card-icon(href="#", title="Reply to this argument")
+            i.icon-reply
       - if (node.itemTitle)
         a(href='/#{node.referenceType}/#{node.reference}', style='text-decoration: none; color: inherit;')
           span.author-name= node.itemTitle

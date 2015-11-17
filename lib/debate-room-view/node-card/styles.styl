@@ -24,6 +24,10 @@
     float left
     padding-bottom 5px
     padding-right 5px
+    height 70px
+    flexbox(flex)
+    flex-direction(column)
+    flex-justify(space-between)
 
     img.avatar
       height 40px
@@ -35,32 +39,63 @@
       padding 5px
       background-color #666
       border-radius 10px
+    
+    .node-vote
+      flexbox(flex)
+      flex-direction(row)
+      flex-justify(space-between)
+      font-weight bold
+      width 100%
+      height 5px
+      padding-bottom 25px
+      
+      .vote
+        font-weight bold
+        font-size 20px
+        color #666
+        
+        &.up
+          &:hover, &.voted
+            color green
+        
+        &.down
+          &:hover, &.voted
+            color red
   
   .action-container
     flexbox(flex)
-    flex-direction(row)
-    
-    .card-icon
-      text-decoration none
-      color #666
-      padding-right 2px
+    flex-direction(column)
+    flex-justify(space-between)
+
+    .action-items
+      flexbox(flex)
+      flex-direction(row)
+      
+      .card-icon
+        text-decoration none
+        color #666
+        padding-right 2px
     
   .node-body-container
     font-size 12px
     display block
-    height 45px
     overflow hidden
     text-overflow ellipsis
     padding-bottom 5px
     
-    &.selected
-      height auto
-      min-height 45px
-      max-height 300px
-    
     .author-name
       font-weight bold
       padding-right 5px
+    
+    .node-body
+      clear left
+      height 45px
+      
+    &.selected
+      .node-body
+        height auto
+        min-height 45px
+        max-height 300px
   
   .read-more-link
     text-decoration none
