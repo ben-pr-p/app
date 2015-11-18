@@ -29,13 +29,13 @@
           a.node-reply-icon.card-icon(href="#", title="Reply to this argument")
             i.icon-reply
       - if (node.itemTitle)
-        a(href='/#{node.referenceType}/#{node.reference}', style='text-decoration: none; color: inherit;')
+        a(href=node.readmoreurl, style='text-decoration: none; color: inherit;')
           span.author-name= node.itemTitle
       - else
         span.author-name= (node.itemAuthor || node.author.displayName)
       .node-body!= node.body
     - if (node.itemTitle)
-      a.read-more-link.hide(href='/#{node.referenceType}/#{node.reference}')
+      a.read-more-link.hide(href=node.readmoreurl)
         span.read-more= t('common.read-more')
     .reply-options-container.hide
       .reply-options

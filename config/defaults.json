@@ -114,7 +114,7 @@
   "usersWhitelist": false,
   "platforms": true,
   "debateroom": true,
-  "multiForum": false,
+  "multiForum": true,
   "tweetText": "",
   "forceSafeImageURLs": true,
   "segmentKey": "",
