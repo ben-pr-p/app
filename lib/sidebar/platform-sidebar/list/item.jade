@@ -9,7 +9,7 @@ li(data-id=item.id, class=active ? 'active' : '')
 
     span.title= item.mediaTitle
     span.created-by
-      - var cardinality = 1 === item.extendedOpinions.length ? 'singular' : 'plural'
-      div= item.extendedOpinions.length + ' ' + t('platform-article.opinion.' + cardinality)
+      - var cardinality = 1 === item.directOpinions.length ? 'singular' : 'plural'
+      div= item.directOpinions.length + ' ' + t('platform-article.opinion.' + cardinality)
       - var cardinality = 1 === item.participants.length ? 'singular' : 'plural'
       div= item.participants.length + ' ' + t('platform-article.participant.' + cardinality)
