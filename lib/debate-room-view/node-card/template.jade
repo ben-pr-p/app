@@ -1,4 +1,3 @@
-- var userVote = node.votes.filter(v => v.caster == user.id)[0]
 - if (userVote)
   - var positive = (userVote.value == 'positive')
   - var negative = (userVote.value == 'negative')
@@ -41,6 +40,6 @@
       .reply-options
         each option in edgesTo
           .option(data-reply-name=option.name)
-            a.little-button(style=`background-color: ${option.color}`)
+            a.little-button(style='background-color: #{option.color}')
             span.reply-opt=option.name
     .reply-form-container

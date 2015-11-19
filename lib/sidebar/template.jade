@@ -4,6 +4,6 @@
       each sidebar in sidebars
         .sidebar-icon(data-sidebar-name=sidebar, class= active ? 'active' : '')
           a(href='#')
-            img(src=`/boot/${sidebar}.svg`)
+            img(src='/boot/#{sidebar}.svg')
 
   .sidebar-container
