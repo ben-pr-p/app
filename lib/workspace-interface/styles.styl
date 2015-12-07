@@ -1,2 +1,40 @@
 @import './venn-diagram/styles'
 @import './tree/styles'
+
+.workspace-nav
+  position fixed
+  right 50px
+  top 80px
+  height 40px
+  width 150px
+  border 1px solid #bbb
+  border-radius 5px
+  box-shadow 1px 1px #bbb
+  z-index 15
+  
+  flexbox(flex)
+  flex-direction(row)
+  flex-align(center)
+  flex-justify(center)
+  background-color #f8f8f8
+  
+  .nav-button
+    width 50%
+    padding 3px
+    text-align center
+    flexbox(flex)
+    flex-direction(row)
+    flex-align(center)
+    flex-justify(center)
+
+    
+    &.active
+      background-color #e8e8e8
+
+    img
+      margin auto
+      display block
+      height 26px
+
+  .tree-button
+    border-right 1px solid #d7dbdd
